@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #171717;
+  --color-brand-accent: #f2a60d;
+  --color-neutral-50: #F9F9F8;
+  --color-neutral-100: #F1F1F0;
+  --color-neutral-900: #111111;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  --tracking-ultra-wide: 0.3em;
+}
+
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
+  h1, h2, h3, .editorial-serif {
+    @apply font-serif italic;
+  }
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0.2) 100%);
+}
+
+.masonry-item:nth-child(even) {
+  margin-top: 4rem;
+}
